@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tdd</title>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if flash[:error] %>
+  <div style="background: red; font-weight: bold;"><%= flash[:error] %></div>
+<% end %>
+
+<% if flash[:notice] %>
+  <div style="background: green; font-weight: bold;"><%= flash[:notice] %></div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

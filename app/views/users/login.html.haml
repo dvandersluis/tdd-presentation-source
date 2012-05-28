@@ -1,0 +1,8 @@
+= form_tag login_url, :method => :post do |f|
+  = label_tag :username, "Username"
+  = text_field_tag :username
+  %br/
+  = label_tag :password, "Password"
+  = password_field_tag :password
+  %br/
+  = submit_tag "Sign In"

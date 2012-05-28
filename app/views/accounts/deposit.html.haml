@@ -1,0 +1,5 @@
+= form_tag deposit_account_path, :method => :post do
+  = label_tag 'amount', "Amount"
+  = text_field_tag :amount
+  %br/
+  = submit_tag "Deposit"

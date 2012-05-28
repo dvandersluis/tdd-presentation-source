@@ -1,0 +1,20 @@
+%h1 Accounts
+
+- if @accounts.empty?
+  You have no accounts
+- else
+  %table
+    %tr
+      %th Account Name
+      %th Balance
+      %th
+    - @accounts.each do |acct|
+      %tr
+        %td= acct.name
+        %td= acct.balance
+        %td
+          = link_to "Deposit", deposit_account_path(acct.id), :method => :get
+          |
+          = link_to "Withdraw", withdraw_account_path(acct.id), :method => :get
+          |
+          = link_to "Transfer", transfer_account_path(acct.id), :method => :get

@@ -1,0 +1,8 @@
+= form_tag transfer_account_path, :method => :post do
+  = label_tag 'amount', "Amount"
+  = text_field_tag :amount
+  %br/
+  = label_tag 'recipient', "Recipient"
+  = select_tag 'recipient', options_from_collection_for_select(@recipients, :id, :name)
+  %br/
+  = submit_tag "Withdraw"
